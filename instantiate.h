@@ -9,6 +9,10 @@ class instantiate
     instantiate();
     void Set(baseclass *b);
     ~instantiate();
+    
+  private:
+    derivedclass<int> m_d;
+    baseclass m_b;
 };
 
 #endif
