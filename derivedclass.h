@@ -4,7 +4,7 @@
 #include "baseclass.h"
 
 template<class Type>
-class derivedclass: public baseclass
+class __attribute__ ((visibility("default"))) derivedclass: public baseclass
 {
   public:
     derivedclass() {};
