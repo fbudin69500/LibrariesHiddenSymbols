@@ -1,10 +1,13 @@
 #include "instantiate.h"
-#include "baseclass.h"
 
 instantiate::instantiate()
 {
   derivedclass<int> *d;
-  baseclass* b = dynamic_cast<baseclass*>(d);
+}
+
+void instantiate::Set(baseclass *b)
+{
+  derivedclass<int>* d = dynamic_cast<derivedclass<int>*>(d);
 }
 
 instantiate::~instantiate()

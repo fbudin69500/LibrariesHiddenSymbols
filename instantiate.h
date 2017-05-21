@@ -7,6 +7,7 @@ class instantiate
 {
   public:
     instantiate();
+    void Set(baseclass *b);
     ~instantiate();
 };
 
