@@ -5,12 +5,14 @@ endif()
 
 project(LibrariesHiddenSymbols)
 
-add_library(baseclass STATIC baseclass.cpp)
+option(BUILD_SHARED_LIBS "Build ITK with shared libraries." OFF)
+add_library(baseclass baseclass.cpp)
 
-set_target_properties(baseclass PROPERTIES CXX_VISIBILITY_PRESET hidden)
-set_target_properties(baseclass PROPERTIES C_VISIBILITY_PRESET hidden)
-set_target_properties(baseclass PROPERTIES VISIBILITY_INLINES_HIDDEN 1)
-
+if(BUILD_SHARED_LIBS)
+  set_target_properties(baseclass PROPERTIES CXX_VISIBILITY_PRESET hidden)
+  set_target_properties(baseclass PROPERTIES C_VISIBILITY_PRESET hidden)
+  set_target_properties(baseclass PROPERTIES VISIBILITY_INLINES_HIDDEN 1)
+endif()
 
 add_library(instantiate SHARED instantiate.cpp)
 
