@@ -2,7 +2,6 @@
 
 instantiate::instantiate()
 {
-  derivedclass<int> *d;
 }
 
 void instantiate::Set(derivedclass<int>* d)

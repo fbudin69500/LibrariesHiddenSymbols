@@ -12,7 +12,6 @@ class instantiate
     
   private:
     derivedclass<int> m_d;
-    baseclass m_b;
 };
 
 #endif
