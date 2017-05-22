@@ -5,9 +5,9 @@ instantiate::instantiate()
   derivedclass<int> *d;
 }
 
-void instantiate::Set(baseclass *b)
+void instantiate::Set(derivedclass<int>* d)
 {
-  derivedclass<int>* d = dynamic_cast<derivedclass<int>*>(d);
+  d->Copy(d);
 }
 
 instantiate::~instantiate()

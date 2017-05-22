@@ -7,7 +7,7 @@ class instantiate
 {
   public:
     instantiate();
-    void Set(baseclass *b);
+    void Set(derivedclass<int> *b);
     ~instantiate();
     
   private:

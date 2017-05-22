@@ -6,6 +6,7 @@ class baseclass
   public:
   baseclass();
   ~baseclass();
+  virtual void Copy(baseclass* b) {};
 };
 
 #endif
